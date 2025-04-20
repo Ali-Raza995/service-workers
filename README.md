@@ -2,6 +2,35 @@
 
 A comprehensive guide for implementing Service Workers in React applications, enabling offline support and PWA capabilities.
 
+## 🌐 What is a Service Worker?
+
+A Service Worker is a script (written in JavaScript) that runs in the background, separate from the main browser thread. It gives your web app powerful features like:
+
+- Offline support
+- Caching assets and API responses
+- Background sync
+- Push notifications
+
+Think of it as a programmable network proxy between your app and the internet.
+
+### ⚙️ How Service Workers Work (Basics)
+
+1. **Registration**
+   - The browser needs to register the service worker file
+   - Usually done in your main `index.js` or `main.tsx`
+
+2. **Installation**
+   - First time it's downloaded, the browser runs the install event
+   - You can pre-cache files here
+
+3. **Activation**
+   - Next, it runs the activate event
+   - Clean up old caches during this phase
+
+4. **Fetch Interception**
+   - Once active, the service worker can intercept every network request
+   - Serve cached assets via the fetch event
+
 ## 🌟 Features
 
 - ✅ Complete offline support
